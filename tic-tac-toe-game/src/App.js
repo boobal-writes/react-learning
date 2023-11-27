@@ -61,7 +61,7 @@ export default function Game() {
     if (move > 0) description = "Goto move #" + move;
     else description = "Goto start";
     return (
-      <li>
+      <li key={move}>
         <button onClick={jumpTo(move)}>{description}</button>
       </li>
     );
